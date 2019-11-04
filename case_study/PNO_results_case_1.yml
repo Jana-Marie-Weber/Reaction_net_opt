@@ -1,0 +1,73 @@
+# ==========================================================
+# = Solver Results                                         =
+# ==========================================================
+# ----------------------------------------------------------
+#   Problem Information
+# ----------------------------------------------------------
+Problem: 
+- Name: tmpbi4vrj2_
+  Lower bound: -4000.000000000002
+  Upper bound: -4000.000000000002
+  Number of objectives: 1
+  Number of constraints: 23
+  Number of variables: 24
+  Number of nonzeros: 56
+  Sense: minimize
+# ----------------------------------------------------------
+#   Solver Information
+# ----------------------------------------------------------
+Solver: 
+- Status: ok
+  User time: 0.07
+  Termination condition: optimal
+  Termination message: MIP - Integer optimal solution\x3a Objective = -4.0000000000e+03
+  Statistics: 
+    Branch and bound: 
+      Number of bounded subproblems: 0
+      Number of created subproblems: 0
+  Error rc: 0
+  Time: 0.19565987586975098
+# ----------------------------------------------------------
+#   Solution Information
+# ----------------------------------------------------------
+Solution: 
+- number of solutions: 1
+  number of solutions displayed: 1
+- Gap: 0.0
+  Status: optimal
+  Message: None
+  Objective:
+    OBJ:
+      Value: -4000.000000000002
+  Variable:
+    m1[1]:
+      Value: 100
+    m1[2]:
+      Value: 100
+    m1[5]:
+      Value: 100
+    m2[1]:
+      Value: -2.842170943040401e-14
+    m2[2]:
+      Value: -2.842170943040401e-14
+    m2[3]:
+      Value: 100.00000000000003
+    m2[5]:
+      Value: 100
+    m3[1]:
+      Value: -2.842170943040401e-14
+    m3[2]:
+      Value: 100
+    m3[4]:
+      Value: 100.00000000000003
+    m3[5]:
+      Value: -2.842170943040401e-14
+    q1[1]:
+      Value: 100.00000000000003
+    q2[2]:
+      Value: 100.00000000000003
+    y1[1]:
+      Value: 1
+    y2[2]:
+      Value: 1
+  Constraint: No values
