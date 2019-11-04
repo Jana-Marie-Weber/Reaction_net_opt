@@ -29,7 +29,9 @@ variables:
 objective function:
 
 constraints:
-$$\int_A \cdot f = \int_0$$
+\begin{equation} 
+A \cdot f = 0 
+\end{equation}
 
 
 #### PNO model formulation
