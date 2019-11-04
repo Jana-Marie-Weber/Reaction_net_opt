@@ -19,10 +19,21 @@ The following image shows a petri net representation of the system. Molecules ar
 ### Model formulation 
 
 The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [petri nets] or [PNO], where tokens move through the network simulating the molecular flow.
-In this work we show implementations of both systems for the case study described above. The main finding is, that the PNO allows a greater level of system control at the cost of higher model complexity. 
+
 
 
 ## Organisation of this repository
+
+Within the folder [models], you will find an abstract model formualtion for the RNFA model and one for the PNO. The folder [case_study] contains data input files and results for three different scenarios.
+
+## How to..
+
+Please ensure you fulfil the system requirements. Then, run following command in the command line in your terminal.
+
+```
+pyomo solve MODEL_XXX.py INPUT_FILE_XXX.dat --solver=cplex 
+```
+Your result will be saved in ```results.yml file```. 
 
 
 
