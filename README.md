@@ -26,7 +26,7 @@ In this work we show implementations of both systems for the case study describe
 
 
 
-[logo]: https://github.com/Jana-Marie-Weber/Reaction_net_opt/blob/master/Reaction_system_circular.png "Logo Title Text 2"
+[logo]: https://github.com/Jana-Marie-Weber/Reaction_net_opt/blob/master/Reaction_systrem_circular.png "Logo Title Text 2"
 [RNFA]: https://onlinelibrary.wiley.com/doi/abs/10.1002/aic.12704
 [petri nets]: https://onlinelibrary.wiley.com/doi/pdf/10.1002/minf.201000086
 [PNO]: https://reader.elsevier.com/reader/sd/pii/009813549185029T?token=61AEF084C496C3044C2E9ECB56EB3427EAE8E2C8EB132172843F3839F376CB3B453833256C5EB9CB15501FC7A6031BB7
