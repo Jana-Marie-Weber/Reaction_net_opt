@@ -1,6 +1,10 @@
 # Reaction network optimisation
 This repository describes two models for reaction network optimisation. One is the **Reaction Network Flux Analysis (RNFA)** adopted from [Voll et al.](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.12704) and the other a **Petri net optimisation (PNO)**. This study serves to guide decision-making on the modelling approach for reaction networks. For further information and to cite this work please refer to [this paper](https://pubs.rsc.org/en/content/articlehtml/2019/re/c9re00213h).
 
+## Organisation of this repository
+
+We outline soem background information and links to related paper in this ReadMe. Within the folder [models] we outline implemented equations for both approaches. One finds an abstract model formualtion for the RNFA model and one for the PNO. An abstract model is a general form of the problem and can be used for multiple data inputs. The folder [case_study] contains data input files and the results for three tested scenarios.
+
 
 ## Reaction network optimisation 
 
@@ -18,36 +22,14 @@ The following image shows a petri net representation of the system. Molecules ar
 
 ### Model formulation 
 
-The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [petri nets] or [PNO], where tokens move through the network simulating the molecular flow.
+The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [petri nets] or [PNO], where tokens move through the network simulating the molecular flow. Please consult the [models] folder for the implemented equations and the [case_study] folder for data input. 
 
-#### RNFA model formulation
-
-parameters:
-
-variables:
-
-objective function:
-
-constraints:
-
-<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\cdot&space;f&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\cdot&space;f&space;=&space;0" title="A \cdot f = 0" /></a>
-
-
-
-#### PNO model formulation
-
-
-#### Scenarios 
+### Scenarios 
 
 In this work, we test the following three scenarios.
 1. Case 1: 100 mol of A, B, and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 2. Case 2: 100 mol of A and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 3. Case 3: 100 mol of A and B are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
-
-
-## Organisation of this repository
-
-Within the folder [models], you will find an abstract model formualtion for the RNFA model and one for the PNO. The folder [case_study] contains data input files and results for three different scenarios.
 
 ## How to..
 
@@ -64,3 +46,8 @@ Your result will be saved in ```results.yml file```.
 [RNFA]: https://onlinelibrary.wiley.com/doi/abs/10.1002/aic.12704
 [petri nets]: https://onlinelibrary.wiley.com/doi/pdf/10.1002/minf.201000086
 [PNO]: https://reader.elsevier.com/reader/sd/pii/009813549185029T?token=61AEF084C496C3044C2E9ECB56EB3427EAE8E2C8EB132172843F3839F376CB3B453833256C5EB9CB15501FC7A6031BB7
+[models]:
+https://github.com/Jana-Marie-Weber/Reaction_net_opt/tree/master/models
+[case_study]:
+https://github.com/Jana-Marie-Weber/Reaction_net_opt/tree/master/case_study
+
