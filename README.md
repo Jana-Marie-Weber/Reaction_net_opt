@@ -20,6 +20,27 @@ The following image shows a petri net representation of the system. Molecules ar
 
 The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [petri nets] or [PNO], where tokens move through the network simulating the molecular flow.
 
+#### RNFA model formulation
+
+parameters:
+
+variables:
+
+objective function:
+
+constraints:
+$$\int_A \cdot f = \int_0$$
+
+
+#### PNO model formulation
+
+
+#### Scenarios 
+
+In this work, we test the following three scenarios.
+1. Case 1: 100 mol of A, B, and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
+2. Case 2: 100 mol of A and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
+3. Case 3: 100 mol of A and B are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 
 
 ## Organisation of this repository
