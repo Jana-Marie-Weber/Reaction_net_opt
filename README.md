@@ -29,9 +29,9 @@ variables:
 objective function:
 
 constraints:
-\begin{equation} 
-A \cdot f = 0 
-\end{equation}
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=A&space;\cdot&space;f&space;=&space;0" target="_blank"><img src="https://latex.codecogs.com/gif.latex?A&space;\cdot&space;f&space;=&space;0" title="A \cdot f = 0" /></a>
+
 
 
 #### PNO model formulation
