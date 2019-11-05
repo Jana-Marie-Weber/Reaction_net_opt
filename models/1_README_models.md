@@ -4,6 +4,15 @@
 
 The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [petri nets] or [PNO], where tokens move through the network simulating the molecular flow. Please consult the [models] folder for the implemented equations and the [case_study] folder for data input. 
 
+### RNFA model 
+See below the equations for the RNFA model formualtion. 
+
+
+### PNO model 
+See below the equations for the PNO model formulation.
+![alt text][PNO_model]  
+
+
 
 ## How to run abstract models in pyomo..
 
@@ -24,4 +33,4 @@ Your result will be saved in ```results.yml file```.
 https://github.com/Jana-Marie-Weber/Reaction_net_opt/tree/master/models
 [case_study]:
 https://github.com/Jana-Marie-Weber/Reaction_net_opt/tree/master/case_study
-
+[PNO_model]:  https://github.com/Jana-Marie-Weber/Reaction_net_opt/blob/master/models/PNO_model_formulation.png 

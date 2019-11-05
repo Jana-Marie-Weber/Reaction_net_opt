@@ -74,7 +74,7 @@ def sy_constraint_rule(model):
 model.symmeryConstraint = Constraint( rule=sy_constraint_rule)
 
 
-# The gib M constraint couples y and q with each other, so that only if y is active the flux can take place and so that y is only active if a flux is allowed due to the stoichiometric relationships. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
+# The gib M constraint couples y and q with each other, so that only if y is active the flux can take place and so that y is only active if a flux is allowed due to the stoichiometric relationships. Please change the big M value accordingly if you modify teh system. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def bM1_constraint_rule(model,t):
