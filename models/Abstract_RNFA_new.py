@@ -3,21 +3,19 @@
 
 # # RNFA Abstract model 
 
-# In[19]:
+# Import all packages needed
 
 
 from pyomo.environ import *
 
 
-# In[20]:
+# setting up a abstract model in pyomo
 
 
 model = AbstractModel()
 
 
-# This part defines the number of substances and reactions and the variables within that space. 
-
-# In[21]:
+# This part defines the number of substances and reactions and the control variables within that space. Hence, we have k from 1 to S and j from 1 to R.
 
 
 model.S = Param(within=NonNegativeIntegers)
@@ -29,7 +27,6 @@ model.J = RangeSet(1, model.R)
 # This part defines the constant parameters for the problem.
 # `model.c` are the flux costs, `model.p` the price for selling a molecule, `model.a` the stoichiometric matrix, and `model.bound` and `model.input` define the inital mol distribution. 
 
-# In[22]:
 
 
 model.c = Param(model.J)
@@ -41,16 +38,12 @@ model.input = Param(model.K)
 
 # Here, we set up the models variables `model.f` and `model.b`. The first `S` fluxes will be specified to guarantee that the system is bounded (Pseudo input fluxes). The following reaction fluxes are degrees of freedom. 
 
-# In[23]:
-
 
 model.f = Var(model.J, domain=NonNegativeReals)
 model.b = Var(model.K, domain=NonNegativeReals)
 
 
 # This pyomo expression defines the objective function. All reaction fluxes are multiplied with the respective costs and all output fluxes with possible revenues per molecule. 
-
-# In[24]:
 
 
 def obj_expression(model):
@@ -59,10 +52,7 @@ def obj_expression(model):
 model.OBJ = Objective(rule=obj_expression)
 
 
-# This pyomo expression defines the stoichemtric constraints: \begin{equation}A \cdot \textbf{f}=\textbf{b}\end{equation} 
-
-# In[25]:
-
+# This pyomo expression defines the stoichemtric constraints: \begin{equation}A \cdot \textbf{f}=\textbf{b}\end{equation}
 
 def ax_constraint_rule(model, k):
     # return the expression for the constraint for i
@@ -73,7 +63,6 @@ model.AxbConstraint = Constraint(model.K, rule=ax_constraint_rule)
 
 # Here we specify the input parameters (input fluxes to the system). We use a constraint formalism, there might be anotehr way to do this.
 
-# In[26]:
 
 
 def Boundary_constraint(model,k):

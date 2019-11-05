@@ -1,28 +1,28 @@
 
 # coding: utf-8
 
-# In[1]:
+# import the required packages and introduce the abstract model through pyomo environment
 
 
 from pyomo.environ import *
 model = AbstractModel()
 
 
-# In[2]:
+# Here, we set the overall parameters, e.g. the number of places (substances) and the number of transitions (reactions)
 
 
 model.places = Param(within=NonNegativeIntegers)
 model.transitions = Param(within=NonNegativeIntegers)
 
 
-# In[3]:
+# The following part defines the control variables. Here we have p from 1 to places and t from 1 to transitions.
 
 
 model.P = RangeSet(1, model.places)
 model.T = RangeSet(1, model.transitions)
 
 
-# In[4]:
+# We define further fixed parameters below. For further information consult the readme in the input file folder.
 
 
 model.c = Param(model.P)
@@ -32,7 +32,7 @@ model.d = Param(model.P,model.T)
 model.a = Param(model.P)
 
 
-# In[5]:
+# This part sets up the optimisation variables. All variables here (m,q, and y) could be used as a matrix, but are split into vectors here to facilitate the set-up of the abstract model. If one wishes to change the overall allowed steps, one needs to add vectors below. Here we have 2 steps bringing m from its initial state m1 to m3. Where the fluxes and the activation of transition per step are recorded in q and y respectively. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 model.m1 = Var(model.P, domain=NonNegativeReals)
@@ -46,7 +46,7 @@ model.y1 = Var(model.T, domain=Binary)
 model.y2 = Var(model.T, domain=Binary)
 
 
-# In[6]:
+# We define the objectve function below. Only m3 is counted here because we wish to value only the final production of the substances, where for q and y reactions at each step are of interest. In this example, the cost associated to y was specified to 0 to enable a fair comaprison between the two approaches. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def obj_expression(model):
@@ -54,7 +54,7 @@ def obj_expression(model):
 model.OBJ = Objective(rule=obj_expression)
 
 
-# In[7]:
+# The following constraint allows only one reaction to happen at each time. All elements of y are summed up in each vector. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def bi1_constraint_rule(model):
@@ -66,7 +66,7 @@ def bi2_constraint_rule(model):
 model.binary2Constraint = Constraint(rule=bi2_constraint_rule)
 
 
-# In[8]:
+# The following constraint enables an ordering of the active transitions. It defines that all active transitions should take place at the beginning, while inactive ones take place at the end. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def sy_constraint_rule(model):
@@ -74,7 +74,7 @@ def sy_constraint_rule(model):
 model.symmeryConstraint = Constraint( rule=sy_constraint_rule)
 
 
-# In[9]:
+# The gib M constraint couples y and q with each other, so that only if y is active the flux can take place and so that y is only active if a flux is allowed due to the stoichiometric relationships. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def bM1_constraint_rule(model,t):
@@ -95,7 +95,7 @@ model.bM4Constraint = Constraint(model.T,rule=bM4_constraint_rule)
 
 
 
-# In[10]:
+# This part defines the initial system. Here we specifiy the amount of mol (tokens) that we introduce at the initial state. This is done by using a pyomo constraint formalism, while it could probbaly be done in a much better way.
 
 
 def bo_constraint_rule(model,p):
@@ -103,7 +103,7 @@ def bo_constraint_rule(model,p):
 model.boundConstraint = Constraint(model.P, rule=bo_constraint_rule)
 
 
-# In[11]:
+# Here we update the marking and we make sure that only transitions that can fire based on the previous token distributions are active. This works as we have previously defined that all markings m nee dto be positive at each step.!!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def ma1_constraint_rule(model,p):

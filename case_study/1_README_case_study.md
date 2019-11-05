@@ -14,12 +14,31 @@ Reaction 2 (R2): C +E → B + D<br>
 The following image shows a petri net representation of the system. Molecules are represented by circular nodes and reactions are shwon as bars. The stoichiometry of the reaction system is contained by the numbers on the edges.
 ![alt text][logo]  
 
-### Scenarios 
+## Scenarios 
 
 In this work, we test the following three scenarios.
 1. Case 1: 100 mol of A, B, and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 2. Case 2: 100 mol of A and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 3. Case 3: 100 mol of A and B are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
+
+### RNFA input file parameters
+
+- param S: the number of substances in the system 
+- param R: the number of total reactions (this includes one pseudo supply reaction per compound and all stoichiometric reactions in the system)
+- param c: a cost/penalty per reaction (again the first reactions a pseudo supply reactions which do not need a cost)
+- param p: the selling price of each substance
+- param a: the stoichiometric relationships 
+- param bound: the pseudo input reaction matrix 
+- param input: defines the amount of mol given to the system of each substance
+
+### PNO input file parameters
+
+- param places: the number of substances
+- param transitions: the number of stoichiometric reactions
+- param c: the selling price for each substance
+- param s: the cost/penalty per reaction 
+- param d: the stoichiometric relationships
+- param a: the input of the substances (marking of places with tokens in the initial state k)
 
 
 
