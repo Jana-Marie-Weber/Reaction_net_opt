@@ -6,11 +6,17 @@ The two approaches to solve such problems are the [RNFA], where stationary mater
 
 ### RNFA model 
 See below the equations for the RNFA model formualtion. 
+![alt text][RNFA_model]  
+
+For further description of the model formualtion, please refer to [Voll et al.](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.12704)
 
 
 ### PNO model 
 See below the equations for the PNO model formulation.
 ![alt text][PNO_model]  
+
+For further description of the model formualtion, please refer to [this paper](https://pubs.rsc.org/en/content/articlehtml/2019/re/c9re00213h).
+
 
 
 
@@ -34,3 +40,5 @@ https://github.com/Jana-Marie-Weber/Reaction_net_opt/tree/master/models
 [case_study]:
 https://github.com/Jana-Marie-Weber/Reaction_net_opt/tree/master/case_study
 [PNO_model]:  https://github.com/Jana-Marie-Weber/Reaction_net_opt/blob/master/models/PNO_model_formulation.png 
+[RNFA_model]:  
+https://github.com/Jana-Marie-Weber/Reaction_net_opt/blob/master/models/RNFA_model_formulation.png 
