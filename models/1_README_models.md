@@ -4,20 +4,17 @@
 
 The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [petri nets] or [PNO], where tokens move through the network simulating the molecular flow. Please consult the [models] folder for the implemented equations and the [case_study] folder for data input. 
 
-### RNFA model 
-See below the equations for the RNFA model formualtion. 
-![alt text][RNFA_model]  
-
-For further description of the model formualtion, please refer to [Voll et al.](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.12704)
-
-
 ### PNO model 
 See below the equations for the PNO model formulation.
 ![alt text][PNO_model]  
 
 For further description of the model formualtion, please refer to [this paper](https://pubs.rsc.org/en/content/articlehtml/2019/re/c9re00213h).
 
+### RNFA model 
+See below the equations for the RNFA model formualtion. 
+![alt text][RNFA_model]  
 
+For further description of the model formualtion, please refer to [Voll et al.](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.12704)
 
 
 ## How to run abstract models in pyomo..
