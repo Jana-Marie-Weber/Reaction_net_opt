@@ -74,25 +74,16 @@ def sy_constraint_rule(model):
 model.symmeryConstraint = Constraint( rule=sy_constraint_rule)
 
 
-# The gib M constraint couples y and q with each other, so that only if y is active the flux can take place and so that y is only active if a flux is allowed due to the stoichiometric relationships. Please change the big M value accordingly if you modify teh system. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
+# The gib M constraint couples y and q with each other, so that only if y is active the flux can take place and so that y is only active if a flux is allowed due to the stoichiometric relationships. Note, that we assign a lower and an upper bound to q here, where none would be needed, hence we constraint the feasible region. Big M is chosen large enough so that this limitation does not lose practical solutions. Please change the big M value accordingly if you modify the system. !!!NEED FOR MODIFICATION WHEN USED FOR MORE STEPS!!!
 
 
 def bM1_constraint_rule(model,t):
-    return model.q1[t] <= 500 * model.y1[t]
+    return model.y1[t]/ 500 <= model.q1[t] <= 500 * model.y1[t]
 model.bM1Constraint = Constraint(model.T,rule=bM1_constraint_rule)
 
 def bM2_constraint_rule(model,t):
-    return model.q2[t] <= 500 * model.y2[t]
+    return model.y2[t]/ 500 <= model.q2[t] <= 500 * model.y2[t]
 model.bM2Constraint = Constraint(model.T,rule=bM2_constraint_rule)
-
-def bM3_constraint_rule(model,t):
-    return model.y1[t] <= 500 * model.q1[t]
-model.bM3Constraint = Constraint(model.T,rule=bM3_constraint_rule)
-
-def bM4_constraint_rule(model,t):
-    return model.y2[t] <= 500 * model.q2[t]
-model.bM4Constraint = Constraint(model.T,rule=bM4_constraint_rule)
-
 
 
 # This part defines the initial system. Here we specifiy the amount of mol (tokens) that we introduce at the initial state. This is done by using a pyomo constraint formalism, while it could probbaly be done in a much better way.
