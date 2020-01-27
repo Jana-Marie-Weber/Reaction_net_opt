@@ -15,7 +15,7 @@ For further description of the model formualtion, please refer to [Weber et al.,
 See below the equations for the RNFA model formualtion. 
 ![alt text][RNFA_model]  
 
-For further description of the model formualtion, please refer to [Voll et al.](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.12704)
+For further description of the model formualtion, please refer to [Voll et al., 2012](https://aiche.onlinelibrary.wiley.com/doi/full/10.1002/aic.12704)
 
 
 ## How to run abstract models in pyomo..

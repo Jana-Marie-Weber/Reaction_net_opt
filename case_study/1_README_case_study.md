@@ -18,17 +18,12 @@ The following image shows a petri net representation of the system. Molecules ar
 
 In this work, we test the following three scenarios.
 
-| Scenario | A       | B       | C | D | E       | reaction cost  | revenue D |
+| Scenario | Input A       | Input B       | Input C | Input D | Input E       | Reaction cost  | Revenue D |
 |----------|---------|---------|---|---|---------|----------------|-----------|
 | Case 1   | 100 mol | 100 mol |   |   | 100 mol | 5              | 50/mol    |
 | Case 2   | 100 mol |         |   |   | 100 mol | 5              | 50/mol    |
 | Case 3   | 100 mol | 100 mol |   |   |         | 5              | 50/mol    |
 
-
-
-1. Case 1: 100 mol of A, B, and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
-2. Case 2: 100 mol of A and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
-3. Case 3: 100 mol of A and B are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 
 ### RNFA input file parameters
 
