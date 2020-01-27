@@ -2,7 +2,7 @@
 
 ## Reaction network optimisation 
 
-When optimising flux distributions in reaction networks, we wish to find the best reaction sequences with regard to prior specifications such as cost per reactions or revenue per molecules. This is difficult because of multiple reasons such as data availability, accuracy of the data, assembly of all relevant reactions, and complex structures within these reaction dependencies. This work targets the models' behaviour with regard to circular substructures in the networks, which have shown to be common elements in chemical reaction networks.
+When optimising flux distributions in reaction networks, we wish to find the best reaction sequences with regard to prior specifications such as cost per reactions or revenue per molecules. This is difficult because of multiple reasons such as data availability, accuracy of the data, assembly of all relevant reactions, and complex structures within these reaction dependencies. This work targets the models' behaviour with regard to circular substructures in the networks, which have shown to be common elements in autimatically-assembled chemical reaction networks.
 
 
 We look at the following sample reaction system. R1 is an irreversible bimolecular reaction producing intermediate C, whereas R2 is an irreversible bimolecular reaction leading to the formation of product D and regeneration of a specie B. The chemical meaning of substance B could be for instance a homogeneous catalyst or a protecting group (PG). A and E are reactants. 
@@ -17,6 +17,15 @@ The following image shows a petri net representation of the system. Molecules ar
 ## Scenarios 
 
 In this work, we test the following three scenarios.
+
+| Scenario | A       | B       | C | D | E       | reaction cost  | revenue D |
+|----------|---------|---------|---|---|---------|----------------|-----------|
+| Case 1   | 100 mol | 100 mol |   |   | 100 mol | 5              | 50/mol    |
+| Case 2   | 100 mol |         |   |   | 100 mol | 5              | 50/mol    |
+| Case 3   | 100 mol | 100 mol |   |   |         | 5              | 50/mol    |
+
+
+
 1. Case 1: 100 mol of A, B, and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 2. Case 2: 100 mol of A and E are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
 3. Case 3: 100 mol of A and B are present. Both reaction costs 5 and the revenue of the desired moelcule D is 50/mol. 
@@ -39,8 +48,6 @@ In this work, we test the following three scenarios.
 - param s: the cost/penalty per reaction 
 - param d: the stoichiometric relationships
 - param a: the input of the substances (marking of places with tokens in the initial state k)
-
-
 
 
 [logo]: https://github.com/Jana-Marie-Weber/Reaction_net_opt/blob/master/Reaction_systrem_circular.png "Logo Title Text 2"
