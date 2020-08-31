@@ -2,8 +2,6 @@
 
 ## Reaction network optimisation 
 
-When optimising flux distributions in reaction networks, we wish to find the best reaction sequences with regard to prior specifications such as cost per reactions or revenue per molecules. This is difficult because of multiple reasons such as data availability, accuracy of the data, assembly of all relevant reactions, and complex structures within these reaction dependencies. This work targets the models' behaviour with regard to circular substructures in the networks, which have shown to be common elements in autimatically-assembled chemical reaction networks.
-
 
 We look at the following sample reaction system. R1 is an irreversible bimolecular reaction producing intermediate C, whereas R2 is an irreversible bimolecular reaction leading to the formation of product D and regeneration of a specie B. The chemical meaning of substance B could be for instance a homogeneous catalyst or a protecting group (PG). A and E are reactants. 
 

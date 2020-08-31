@@ -2,14 +2,14 @@
 
 ## Model formulation 
 
-The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [Petri nets] or [PNO], where tokens move through the network simulating the molecular flow.
+The two approaches to solve such problems are the [RNFA], where stationary material balances model a steady-state of the system and constrain the network, and [Petri nets] or PNO, where tokens move through the network simulating the molecular flow.
 
 ### PNO model 
 See below the equations for the PNO model formulation.
 ![alt text][PNO_model]  
 
 
-For further description of the model formualtion, please refer to [Weber et al., 2020](https://pubs.rsc.org/en/content/articlehtml/2019/re/c9re00213h).
+For further description of the model formualtion, please refer to *Weber et al. (2020) Modeling circular structures in reaction networks: Petri nets and reaction network flux analysis. Proceedings of the 30th European Symposium on Computer Aided Process Engineering. In press.*
 
 ### RNFA model 
 See below the equations for the RNFA model formualtion. 
